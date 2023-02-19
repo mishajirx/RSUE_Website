@@ -8,7 +8,7 @@
 1. Нажмите кнопку fork в репозитории https://github.com/mishajirx/RSUE_Website
 2. Перейдите в командную строку
 3. Перейдите подходящую вам папку
-4. вбейте команду git clone  https://github.com/<YourName>/RSUE_Website
+4. вбейте команду git clone  https://github.com/YourName/RSUE_Website
 
 ## Установка нужного обеспечения ##
 #### Для скачивания необходимых библиотек нужно: ####
