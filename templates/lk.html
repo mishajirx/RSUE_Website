@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form action="" method="post">
+        <div class="container">
+            <!-- Любой код -->
+            <div>
+
+                <p>
+
+
+                    {% if not current_user.is_authenticated %}
+                        <p>Вы не вошли в систему</p>
+                    {% elif current_user.user_type < 2 %}
+                        <a class="btn btn-success" style="width: 180px; height:80px" href="/users/edit">Редактировать
+                            инфу</a>
+                        <a class="btn btn-success" style="width: 180px; height:80px" href="/users/get">Обо
+                            мне</a>
+                    {% elif current_user.user_type == 2 %}
+                        <a class="btn btn-success" style="width: 180px; height:80px" href="/couriers/edit">Редактировать
+                            информацию</a>
+                        <a class="btn btn-success" style="width: 180px; height:80px" href="/couriers/get">Обо
+                            мне</a>
+                    {% elif current_user.user_type == 3 %}
+                        <a class="btn btn-success" style="width: 180px; height:80px" href="/admins">Назначить
+                            админов</a>
+                        <a class="btn btn-success" style="width: 180px; height:80px" href="/clear">Очистить
+                            базу данных</a>
+
+                    {% endif %}
+                </p>
+            </div>
+        
+        
+            
+        </div>
+
+
+    </form>
+{% endblock %}

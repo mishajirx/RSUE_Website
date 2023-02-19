@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Пользователи в системе</h1>
+{% for item in items %}
+<div>
+    <h2>Пользователь {{item.id}}</h2>
+    <a class="btn btn-success" style="width: 180px; height:80px" href="/admins/{{item.id}}">Сделать админом</a>
+</div>
+{% endfor %}
+{% endblock %}
